@@ -17,6 +17,7 @@ This project was inspired by learning to calculate advanced baseball metrics suc
 ****Methodology Overview****
 
 **Collection and Standardization**
+
 My data comes from the publicly available individual player stat .csvs from each of the 2025 Great Plains East teams: the Eau Claire Express, Duluth Huskies, La Crosse Loggers, Thunder Bay Border Cats, Rochester Honkers, and Waterloo Bucks. The data was cleaned inside of Microsoft Excel, and all analysis was performed in **R Markdown** using [`GPE_Pitching.Rmd`](./GPE_Pitching.Rmd). I decided to filter my data by excluding all pitchers with less than **15 innings pitched**. Though a benchmark such as 20 innings may have been a better choice for sample size purposes, I wanted to include pitchers from Eau Claire with 15-20 innings so that I could better contextualize the scores. 
 
 Though I went through several versions before arriving at my finished formula, the final metric integrates a pitcher’s underlying performance (strikeouts, walks, and home runs allowed) with a **Defense-Independent Component ERA (DICE)** adjustment. Each variable was standardized to a z-score to allow fair comparison across categories and then combined using the following weighted formula:
