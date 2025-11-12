@@ -1,0 +1,491 @@
+---
+title: "GPE Pitching Analysis"
+author: "by Jack Hanaway"
+date: "2025-10-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+setwd("~/Downloads")
+knitr::opts_chunk$set(echo = TRUE)
+RAW_PITCH<- read.csv("Great Plains East Pitching.CSV")
+
+# Filter out pitchers with low innings pitched
+# Adjust the threshold (e.g., 20 innings) as needed
+GPE_PITCH_FILTERED <- RAW_PITCH[RAW_PITCH$IP >= 15, ]
+
+```
+
+```{r, creating metric}
+# Check the first few rows of the numeric columns
+numeric_cols <- c("ERA","WHIP","K.9","BB","H","FPS.","IP")
+head(GPE_PITCH_FILTERED[numeric_cols])
+
+# Remove any non-numeric characters from FPS. (like % signs) and convert to numeric
+GPE_PITCH_FILTERED$FPS. <- as.numeric(gsub("%","",GPE_PITCH_FILTERED$FPS.))
+
+# Ensure other columns are numeric
+for(col in numeric_cols[-6]) {  # exclude FPS. since we handled it
+  GPE_PITCH_FILTERED[[col]] <- as.numeric(GPE_PITCH_FILTERED[[col]])
+}
+
+# Define weights including BAA
+weights_pitching <- c(
+  ERA = -0.30,
+  WHIP = -0.32,
+  K.9 = 0.08,
+  BB = -0.05,
+  H = -0.05,
+  FPS. = 0.05,
+  IP = 0.10,
+  BAA = -0.1   # Added BAA, higher is worse
+)
+
+# Compute PitchingScore
+# Compute PitchingScore correctly
+GPE_PITCH_FILTERED$PitchingScore <- 
+  GPE_PITCH_FILTERED$ERA * weights_pitching["ERA"] +
+  GPE_PITCH_FILTERED$WHIP * weights_pitching["WHIP"] +
+  GPE_PITCH_FILTERED$K.9 * weights_pitching["K.9"] +
+  GPE_PITCH_FILTERED$BB * weights_pitching["BB"] +
+  GPE_PITCH_FILTERED$H * weights_pitching["H"] +
+  GPE_PITCH_FILTERED$FPS. * weights_pitching["FPS."] +
+  GPE_PITCH_FILTERED$IP * weights_pitching["IP"] +
+  GPE_PITCH_FILTERED$BAA * weights_pitching["BAA"]
+
+
+# Check the result
+print(GPE_PITCH_FILTERED[, c("PLAYER", "PitchingScore", "IP")])
+
+library(ggplot2)
+
+# Remove rows with NA PitchingScore or IP
+plot_data <- GPE_PITCH_FILTERED[!is.na(GPE_PITCH_FILTERED$PitchingScore) & !is.na(GPE_PITCH_FILTERED$IP), ]
+
+# Scatterplot
+ggplot(plot_data, aes(x = BF, y = PitchingScore, label = PLAYER)) +
+  geom_point(aes(color = PitchingScore), size = 3) +        # points colored by score
+  geom_text(vjust = -0.5, hjust = 0.5, size = 3) +         # player labels
+  scale_color_gradient(low = "red", high = "green") +      # low scores red, high green
+  labs(title = "Pitching Score vs Batters Faced",
+       x = "Batters Faced (BF)",
+       y = "Pitching Score") +
+  theme_minimal()
+
+mean(GPE_PITCH_FILTERED$PitchingScore, na.rm = TRUE)
+```
+
+```{r, z-scores}
+#calculate z-scores
+GPE_PITCH_FILTERED$PitchingScore_z <- scale(GPE_PITCH_FILTERED$PitchingScore, center = TRUE, scale = TRUE)
+
+#z-scores vs BF
+# Ensure PitchingScore is numeric
+GPE_PITCH_FILTERED$PitchingScore <- as.numeric(GPE_PITCH_FILTERED$PitchingScore)
+
+# Compute z-scores
+GPE_PITCH_FILTERED$PitchingScore_z <- scale(GPE_PITCH_FILTERED$PitchingScore)
+
+# Define performance tiers
+quantiles <- quantile(GPE_PITCH_FILTERED$PitchingScore, probs = c(0, 1/3, 2/3, 1), na.rm = TRUE)
+
+GPE_PITCH_FILTERED$Tier <- cut(
+  GPE_PITCH_FILTERED$PitchingScore,
+  breaks = quantiles,
+  labels = c("Bottom", "Middle", "Top"),
+  include.lowest = TRUE
+)
+
+# Assign colors
+colors <- c("Bottom" = "red", "Middle" = "yellow", "Top" = "green")
+
+# Scatterplot
+plot(
+  GPE_PITCH_FILTERED$BF,
+  GPE_PITCH_FILTERED$PitchingScore_z,
+  xlab = "Batters Faced",
+  ylab = "Pitching Score (Z-Score)",
+  main = "Pitching Score Z-Score vs Batters Faced",
+  pch = 19,
+  col = colors[GPE_PITCH_FILTERED$Tier]
+)
+
+# Add player names
+text(
+  GPE_PITCH_FILTERED$BF,
+  GPE_PITCH_FILTERED$PitchingScore_z,
+  labels = GPE_PITCH_FILTERED$PLAYER,
+  pos = 3, # position above points
+  cex = 0.7
+)
+
+# Optional: add legend
+legend("topright", legend = names(colors), col = colors, pch = 19, title = "Performance Tier")
+
+library(dplyr)
+
+# Count number of pitchers per team in each tier
+team_tier_counts <- GPE_PITCH_FILTERED %>%
+  group_by(TEAM, Tier) %>%
+  summarise(Count = n(), .groups = "drop")
+
+# Teams with the most Top-tier pitchers
+top_teams <- team_tier_counts %>%
+  filter(Tier == "Top") %>%
+  arrange(desc(Count))
+
+# Teams with the most Bottom-tier pitchers
+bottom_teams <- team_tier_counts %>%
+  filter(Tier == "Bottom") %>%
+  arrange(desc(Count))
+
+# Print results
+print("Teams with most Top-tier pitchers:")
+print(top_teams)
+
+print("Teams with most Bottom-tier pitchers:")
+print(bottom_teams)
+
+
+
+```
+
+```{r, DICE}
+GPE_PITCH_FILTERED <- GPE_PITCH_FILTERED %>%
+  mutate(
+    DICE = 3.00 + ((13 * HR) + (3 * (BB + HB)) - (2 * K)) / IP
+  )
+
+library(dplyr)
+
+# Rank dataset by DICE (lower is better)
+DICE_Ranked <- GPE_PITCH_FILTERED %>%
+  arrange(DICE) %>%  # sort ascending (best DICE first)
+  mutate(DICE_Rank = rank(DICE, ties.method = "first")) %>%
+  select(DICE_Rank, PLAYER, TEAM, DICE)
+
+# Print the ranked dataset
+print(DICE_Ranked)
+
+
+
+
+
+
+library(ggplot2)
+library(dplyr)
+
+# Rank and divide into performance tiers (lower DICE is better)
+GPE_PITCH_FILTERED <- GPE_PITCH_FILTERED %>%
+  mutate(
+    DICE_Rank = rank(DICE, ties.method = "first"),
+    PerformanceTier = case_when(
+      DICE_Rank <= n() / 3 ~ "Top",
+      DICE_Rank <= 2 * n() / 3 ~ "Middle",
+      TRUE ~ "Bottom"
+    )
+  )
+
+# Define color palette for tiers
+tier_colors <- c("Top" = "green3", "Middle" = "gold", "Bottom" = "red3")
+
+# Scatterplot of DICE vs Batters Faced with labels and color coding
+ggplot(GPE_PITCH_FILTERED, aes(x = BF, y = DICE, color = PerformanceTier, label = PLAYER)) +
+  geom_point(size = 3) +
+  geom_text(vjust = -0.8, size = 3, check_overlap = TRUE) +
+  scale_color_manual(values = tier_colors) +
+  labs(
+    title = "DICE vs Batters Faced (Color-Coded by Performance Tier)",
+    x = "Batters Faced (BF)",
+    y = "DICE (Defense-Independent Component ERA)",
+    color = "Performance Tier"
+  ) +
+  theme_minimal(base_size = 14)
+
+
+#Teams with best/worse DICE
+library(dplyr)
+
+# Define thresholds for "low" and "high" DICE based on quantiles
+low_threshold <- quantile(GPE_PITCH_FILTERED$DICE, 0.33, na.rm = TRUE)
+high_threshold <- quantile(GPE_PITCH_FILTERED$DICE, 0.67, na.rm = TRUE)
+
+# Categorize pitchers by performance tier
+GPE_PITCH_FILTERED <- GPE_PITCH_FILTERED %>%
+  mutate(DICE_Tier = case_when(
+    DICE <= low_threshold ~ "Low DICE (Good)",
+    DICE >= high_threshold ~ "High DICE (Poor)",
+    TRUE ~ "Mid DICE"
+  ))
+
+# Count number of low/high DICE pitchers per team
+Team_DICE_Tiers <- GPE_PITCH_FILTERED %>%
+  group_by(TEAM, DICE_Tier) %>%
+  summarise(Count = n(), .groups = "drop")
+
+# Teams with most low DICE pitchers
+Top_Low_DICE_Teams <- Team_DICE_Tiers %>%
+  filter(DICE_Tier == "Low DICE (Good)") %>%
+  arrange(desc(Count))
+
+# Teams with most high DICE pitchers
+Top_High_DICE_Teams <- Team_DICE_Tiers %>%
+  filter(DICE_Tier == "High DICE (Poor)") %>%
+  arrange(desc(Count))
+
+# Print results
+cat("Teams with Most Low-DICE Pitchers (Best Performers):\n")
+print(Top_Low_DICE_Teams)
+
+cat("\nTeams with Most High-DICE Pitchers (Worst Performers):\n")
+print(Top_High_DICE_Teams)
+
+
+
+```
+
+```{r, PitchingScoreV2 (feat. DICE)}
+# Define new weights (sum ≈ 1)
+weights_pitching_v2 <- c(
+  ERA  = -0.15,
+  WHIP = -0.20,
+  K.9  =  0.10,
+  BB   = -0.05,
+  H    = -0.05,
+  FPS. =  0.05,
+  IP   =  0.10,
+  BAA  = -0.10,
+  DICE = -0.40  # heavily weighted (lower DICE is better)
+)
+
+GPE_PITCH_FILTERED <- GPE_PITCH_FILTERED %>%
+  mutate(
+    PitchingScore_v2 = (
+      ERA  * weights_pitching_v2["ERA"]  +
+      WHIP * weights_pitching_v2["WHIP"] +
+      K.9  * weights_pitching_v2["K.9"]  +
+      BB   * weights_pitching_v2["BB"]   +
+      H    * weights_pitching_v2["H"]    +
+      FPS. * weights_pitching_v2["FPS."] +
+      IP   * weights_pitching_v2["IP"]   +
+      BAA  * weights_pitching_v2["BAA"]  +
+      DICE * weights_pitching_v2["DICE"]
+    )
+  )
+
+GPE_PITCH_FILTERED %>%
+  arrange(desc(PitchingScore_v2)) %>%
+  select(PLAYER, TEAM, PitchingScore_v2)
+
+#plot with names
+ggplot(GPE_PITCH_FILTERED, aes(x = IP, y = PitchingScore_v2, color = PitchingScore_v2)) +
+  geom_point() +
+  geom_text(aes(label = PLAYER), vjust = -0.5, size = 3) +
+  scale_color_gradient(low = "red", high = "green") +
+  labs(title = "Pitching Score v2 vs Innings Pitched", x = "Innings Pitched", y = "Pitching Score v2") +
+  theme_minimal()
+
+
+library(ggplot2)
+library(plotly)
+
+#Hover plot
+# Create tooltip column
+GPE_PITCH_FILTERED <- GPE_PITCH_FILTERED %>%
+  mutate(tooltip = paste(
+    "Player:", PLAYER,
+    "<br>Team:", TEAM,
+    "<br>Score:", round(PitchingScore_v2, 2)
+  ))
+
+# Fit regression model
+fit <- lm(PitchingScore_v2 ~ IP, data = GPE_PITCH_FILTERED)
+
+# Create regression line data
+line_data <- data.frame(
+  IP = seq(
+    min(GPE_PITCH_FILTERED$IP, na.rm = TRUE),
+    max(GPE_PITCH_FILTERED$IP, na.rm = TRUE),
+    length.out = 100
+  )
+)
+line_data$pred <- predict(fit, newdata = line_data)
+
+# ✅ Build ggplot (explicitly define text inside geom_point())
+p <- ggplot(GPE_PITCH_FILTERED, aes(x = IP, y = PitchingScore_v2, color = PitchingScore_v2)) +
+  geom_point(aes(text = tooltip), size = 3) +  # ✅ tooltip defined here
+  geom_line(data = line_data, aes(x = IP, y = pred),
+            color = "black", linetype = "dashed", linewidth = 1) +
+  scale_color_gradient(low = "red", high = "green") +
+  labs(
+    title = "Pitching Score v2 vs Innings Pitched",
+    x = "Innings Pitched",
+    y = "Pitching Score v2"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    legend.position = "right"
+  )
+
+# ✅ Convert to interactive Plotly chart
+ggplotly(p, tooltip = "text")
+
+mean(GPE_PITCH_FILTERED$PitchingScore_v2, na.rm = TRUE)
+```
+
+
+```{r, ERA+ Style Putching Score, Color by Team}
+library(ggplot2)
+library(plotly)
+library(dplyr)
+
+# --- 1. Scale PitchingScore_v2 like ERA+ (league average = 100) ---
+league_avg <- mean(GPE_PITCH_FILTERED$PitchingScore_v2, na.rm = TRUE)
+
+GPE_PITCH_FILTERED <- GPE_PITCH_FILTERED %>%
+  mutate(
+    PitchingScore_v2_100 = 100 * (PitchingScore_v2 / league_avg),
+    tooltip = paste(
+      "Player:", PLAYER,
+      "<br>Team:", TEAM,
+      "<br>Score:", round(PitchingScore_v2_100, 1)
+    )
+  )
+
+# --- 2. Fit regression model for trend line ---
+fit <- lm(PitchingScore_v2_100 ~ IP, data = GPE_PITCH_FILTERED)
+
+line_data <- data.frame(
+  IP = seq(
+    min(GPE_PITCH_FILTERED$IP, na.rm = TRUE),
+    max(GPE_PITCH_FILTERED$IP, na.rm = TRUE),
+    length.out = 100
+  )
+)
+line_data$pred <- predict(fit, newdata = line_data)
+
+# --- 3. Build ggplot with custom team colors ---
+p_pitch <- ggplot(GPE_PITCH_FILTERED, aes(x = IP, y = PitchingScore_v2_100, color = TEAM)) +
+  geom_point(aes(text = tooltip), size = 3) +
+  geom_line(data = line_data, aes(x = IP, y = pred),
+            color = "black", linetype = "dashed", linewidth = 1) +
+  scale_color_manual(
+    values = c(
+      "DULUTH" = "blue",
+      "EAU CLAIRE" = "orange",
+      "THUNDER BAY" = "red",
+      "LA CROSSE" = "green",
+      "ROCHESTER" = "purple",
+      "WATERLOO" = "yellow"
+    )
+  ) +
+  labs(
+    title = "Pitching Score v2 vs Innings Pitched (League Avg = 100)",
+    x = "Innings Pitched",
+    y = "Pitching Score v2 (Scaled)",
+    color = "Team"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    legend.position = "right"
+  )
+
+# --- 4. Convert to interactive Plotly chart ---
+ggplotly(p_pitch, tooltip = "text")
+
+
+summary(fit)
+```
+
+```{r, graph with r^2, regression equation, p-value}
+library(plotly)
+
+# --- 1. Extract regression info from your model ---
+intercept <- coef(fit)[1]
+slope <- coef(fit)[2]
+r2 <- summary(fit)$r.squared
+pval <- summary(fit)$coefficients[2, 4]
+
+# --- 2. Create formatted annotation text ---
+eq_text <- paste0(
+  "y = ", round(intercept, 3), " + ", round(slope, 3), "x",
+  "<br>R² = ", round(r2, 3),
+  "<br>p = ", format(pval, scientific = TRUE, digits = 3)
+)
+
+# --- 3. Convert ggplot to Plotly and add annotation ---
+p_pitch_plotly <- ggplotly(p_pitch, tooltip = "text") %>%
+  layout(
+    annotations = list(
+      x = 0.98, y = 0.98,               # top-right corner (0-1 in "paper" coordinates)
+      xref = "paper", yref = "paper",
+      text = eq_text,
+      showarrow = FALSE,
+      align = "right",
+      font = list(size = 12, color = "black")
+    )
+  )
+
+# --- 4. Display interactive plot ---
+p_pitch_plotly
+
+
+
+
+
+
+
+```
+
+
+```{r, ranking for new scale}
+library(dplyr)
+
+# --- Scale PitchingScore_v2 similar to OPS+ (league avg = 100) ---
+GPE_PITCH_FILTERED <- GPE_PITCH_FILTERED %>%
+  mutate(
+    PitchingScore_v2_100 = 100 + 15 * ((PitchingScore_v2 - mean(PitchingScore_v2, na.rm = TRUE)) / 
+                                       sd(PitchingScore_v2, na.rm = TRUE))
+  )
+
+# --- Create full pitching leaderboard ---
+pitching_leaderboard <- GPE_PITCH_FILTERED %>%
+  select(PLAYER, TEAM, IP, PitchingScore_v2_100) %>%
+  arrange(desc(PitchingScore_v2_100)) %>%
+  mutate(Rank = row_number())
+
+# --- Print the full leaderboard ---
+print(pitching_leaderboard)
+print(GPE_PITCH_FILTERED$PitchingScore_v2_OPAplus)
+print(GPE_PITCH_FILTERED$PitchingScore_v2_100)
+
+```
+
+
+
+
+
+
+
+```{Top/Bottom 25}
+library(dplyr)
+
+# Top 25 pitchers
+top_25 <- GPE_PITCH_FILTERED %>%
+  arrange(desc(PitchingScore_v2)) %>%
+  slice_head(n = 25) %>%
+  select(PLAYER, TEAM, PitchingScore_v2)
+
+# Bottom 25 pitchers
+bottom_25 <- GPE_PITCH_FILTERED %>%
+  arrange(PitchingScore_v2) %>%
+  slice_head(n = 25) %>%
+  select(PLAYER, TEAM, PitchingScore_v2)
+
+# Print them
+top_25
+bottom_25
+
+```
