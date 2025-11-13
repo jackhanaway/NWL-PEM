@@ -65,3 +65,9 @@ The most heavily weighted component, DICE (Defense-Independent Component ERA) is
 rewards pitchers who consistently prevent runs regardless of team context or small sample fluctuations. DICE and its cousin FIP are among my favorite metrics for evaluating pitchers who can consistently "get it done".
 
 To improve interpretability, I decided to scale the score in a similar manner that stats like WRc+ and ERA+ are weighted in MLB context, so that 100 represents the league average, with each 15-point increment corresponding roughly to one standard deviation above or below average. Since this study only covers data from one of the four Northwoods League divisions, "league average" signifies average production from this division. his makes the metric intuitive and easy to interpret, similar to widely used statistics like OPS+ or ERA+, allowing quick comparison of pitchers’ performance relative to their peers.
+
+---
+****Interactive Plot of Pitching Score****
+
+https://jackhanaway.github.io/NWL-PEM/GPE-Pitching-Interactive.html
+
