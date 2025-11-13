@@ -56,7 +56,27 @@ DICE (−0.40): The most heavily weighted component, DICE (Defense-Independent C
 
 To improve interpretability, I decided to scale the score in a similar manner that stats like WRc+ and ERA+ are weighted in MLB context, so that 100 represents the league average, with each 15-point increment corresponding roughly to one standard deviation above or below average. Since this study only covers data from one of the four Northwoods League divisions, "league average" signifies average production from this division. This makes the metric intuitive and easy to interpret, similar to widely used statistics like OPS+ or ERA+, allowing quick comparison of pitchers’ performance relative to their peers.
 
-Interactive Plot of Pitching Score
+**Interactive Plot of Pitching Score**
 
 [GPE-Pitching-Interactive.html](https://jackhanaway.github.io/NWL-PEM/GPE-Pitching-Interactive.html)
+
+**Pitching Score vs. Innings Pitched**
+
+To visualize the relationship between pitcher workload and performance, I plotted the pitching score against total innings pitched. Each point represents an individual pitcher in the Great Plains East Division, allowing comparison of both durability and overall effectiveness.
+
+A linear regression was fitted to the data to examine any potential trend between innings pitched and pitching score. The resulting R² of 0.06 reflects that a pitcher's innings pitched account for about 6-7% of the variation in Great Plains East pitching scores, though innings pitched serves as a good benchmark to contrast perfomance and durability. The p-value of 0 confirms the statistical significance of the regression model in the R environment, though in practical terms it reflects the structure of the fitted model rather than a meaningful predictive relationship.
+
+This plot highlights that high or low GPE Pitching Scores are not simply a function of innings pitched; rather, the scores reflect underlying performance metrics and DICE adjustments. Pitchers with fewer innings can still achieve high scores if their underlying metrics are strong, reinforcing the metric’s ability to capture quality of performance independent of sample size.
+---
+
+**Scouting Grade Overview**
+
+In addition to the quantitative pitching score (GPE Pitch Score), I wanted to provide quantitative scouting grades for certain outlier performers. These grades provide context that the data alone cannot fully reflect, including pitch repertoire, delivery, command, in-game decision-making, mound presence, and more factors. 
+
+For this phase of the project, I will generate scouting reports for the top five pitchers based on their GPE Pitching Scores to contextualize their outlier scores. I will also be highlighting their strengths, areas for improvement, and overall potential. Additionally, a few honorable mentions will be included to recognize pitchers who excelled in specific aspects despite slightly lower overall scores. These scouting evaluations complement the metric-driven analysis, offering a comprehensive picture of player performance in the Great Plains East Division.
+
+### #1 – Dawson Hargrove, RHP | GPE Pitching Score: 455.2 | Team: Eau Claire Express | Current School: Southern Illinois (via Arkansas State) | Age: 23 | Height/Weight: 6'3/195 lbs
+
+
+
 
