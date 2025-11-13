@@ -77,7 +77,7 @@ For this phase of the project, I will generate scouting reports for the top five
 
 ### #1 – Dawson Hargrove, RHP | GPE Pitching Score: 455.2 | Team: Eau Claire Express | Current School: Southern Illinois (via Arkansas State) | Age: 23 | Height/Weight: 6'3/195 lbs
 
-In a relatively small sample size, Dawson Hargrove established himself as the most reliable pitcher for the express, posting a 1.07 ERA over 25.1 innings in 7 appearances, including 3 starts. A theme common to each of the top 5 scorers in the division, Hargrove has multiple aspects to his game that helped him perform as the best pitcher in the division.
+In a relatively small sample size, Dawson Hargrove established himself as the most reliable pitcher for the express, posting a 1.07 ERA over 25.1 innings in 7 appearances, including 3 starts. A theme common to each of the top 5 scorers in the division, Hargrove has multiple unique aspects to his game that helped him cement himself as an outlier performer. 
 
 **Arsenal**
 
@@ -90,6 +90,7 @@ Having had the opportunity to work with Hargrove in Eau Claire, I was able to ga
 **MLB Comparison: Trey Yesavage**
 
 Hargrove's arsenal of high-IVB fastballs, complemented by a healthy mix of low or negative IVB offspeed offerings bears striking similarities to Toronto's Trey Yesavage. The two share the same tall and lanky stature, though Hargrove will still need to grow into his body to reach his maximum velocity potential.   
+
 
 
 
