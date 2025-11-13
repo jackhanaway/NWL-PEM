@@ -64,7 +64,7 @@ To improve interpretability, I decided to scale the score in a similar manner th
 
 To visualize the relationship between pitcher workload and performance, I plotted the pitching score against total innings pitched. Each point represents an individual pitcher in the Great Plains East Division, allowing comparison of both durability and overall effectiveness.
 
-A linear regression was fitted to the data to examine any potential trend between innings pitched and pitching score. The resulting R² of 0.06 reflects that a pitcher's innings pitched account for about 6-7% of the variation in Great Plains East pitching scores, though innings pitched serves as a good benchmark to contrast perfomance and durability. The p-value of 0 confirms the statistical significance of the regression model in the R environment, though in practical terms it reflects the structure of the fitted model rather than a meaningful predictive relationship.
+A linear regression was fitted to the data to examine any potential trend between innings pitched and pitching score. The resulting R² of 0.06 reflects that a pitcher's innings pitched account for about 6-7% of the variation in Great Plains East pitching scores, though innings pitched serves as a good benchmark to contrast perfomance and durability, while visualizing outlier performers. The p-value of 0 confirms the statistical significance of the regression model in the R environment, though in practical terms it reflects the structure of the fitted model rather than a meaningful predictive relationship.
 
 This plot highlights that high or low GPE Pitching Scores are not simply a function of innings pitched; rather, the scores reflect underlying performance metrics and DICE adjustments. Pitchers with fewer innings can still achieve high scores if their underlying metrics are strong, reinforcing the metric’s ability to capture quality of performance independent of sample size.
 ---
@@ -90,6 +90,7 @@ Having had the opportunity to work with Hargrove in Eau Claire, I was able to ga
 **MLB Comparison: Trey Yesavage**
 
 Hargrove's arsenal of high-IVB fastballs, complemented by a healthy mix of low or negative IVB offspeed offerings bears striking similarities to Toronto's Trey Yesavage. The two share the same tall and lanky stature, though Hargrove will still need to grow into his body to reach his maximum velocity potential.   
+
 
 
 
