@@ -112,10 +112,11 @@ Though the two pitchers have contrasting mound presences, the similarities betwe
 
 ### #3 – Cohen Gomez, RHP | GPE Pitching Score: 372.1 | Team: Eau Claire Express | School: Stanford | Age: 20 | Height/Weight: 6'3/212 lbs
 
-Cohen Gomez posted the highest GPE Pitching Score out of any pitcher in the dataset with more than 30 innings pitched. The big right hander was a staple for Eau Claire's rotation this summer, pitching to a 3.70 ERA over 48.2 innings. Gomez had the 4th lowest DICE in the division, and 
+Cohen Gomez posted the highest GPE Pitching Score out of any pitcher in the dataset with more than 30 innings pitched. The big right hander was a staple for Eau Claire's rotation this summer, pitching to a 3.70 ERA over 48.2 innings. Gomez had the 4th lowest DICE in the division, which was uncharacteristic of pitchers with his sample size. 
 
 
 [🔍 View Interactive DICE Plot](https://jackhanaway.github.io/NWL-PEM/GPE-DICE-Interactive.html)
+
 
 
 
