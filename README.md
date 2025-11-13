@@ -77,6 +77,21 @@ For this phase of the project, I will generate scouting reports for the top five
 
 ### #1 – Dawson Hargrove, RHP | GPE Pitching Score: 455.2 | Team: Eau Claire Express | Current School: Southern Illinois (via Arkansas State) | Age: 23 | Height/Weight: 6'3/195 lbs
 
+In a relatively small sample size, Dawson Hargrove established himself as the most reliable pitcher for the express, posting a 1.07 ERA over 25.1 innings in 7 appearances, including 3 starts. A theme common to each of the top 5 scorers in the division, Hargrove has multiple aspects to his game that helped him perform as the best pitcher in the division.
+
+**Arsenal**
+
+Hargrove boasts a complete north to south arsenal including a 4 seam, splitter, slider, and 12-6 curveball. Hargrove's 4 seam fastball sits from 88-90 MPH, topping out at around 92, and excels at commanding it up in the strike zone, and tunneling his offspeeds off of it. Hargrove's 4 seam routinely registers outlier induced vertical break, consistently topping 20 inches of IVB, and released it from a near 7 foot release height on average. This shape complemented perfectly with his offspeeds, the most effective of which being his 80 MPH splitter. Hargrove executed his splitter for consistent strikes, low spin rate (1000-1300) combined with a fading, tumbling shape. Hargrove is also comfortable with a sweeping slider from 81-84 MPH, and a 12-6 curveball with heavy vertical drop. 
+
+**Intangibles**
+
+Having had the opportunity to work with Hargrove in Eau Claire, I was able to gauge two key proponents to his success: he knows how to use his arsenal, and he pitches with emotion. Hargrove's pitch arsenal and shapes resemble a Northwoods League equivalent of an MLB north-to-south arsenal, and his eye-popping GPE Pitching Score is a testament to his ability to execute said arsenal. While some negative body language may occasionally seep through from a bad call, Hargrove is on the mound looking to dominate his opponent, and boasts daunting mound presence. Hargrove's lethal combination of a strong mental game and a refined north-south arsneal led to him dominating the Great Plains East division with the top GPE Pitching Score. 
+
+**MLB Comparison: Trey Yesavage**
+
+Hargrove's arsenal of high-IVB fastballs, complemented by a healthy mix of low or negative IVB offspeed offerings bears striking similarities to Toronto's Trey Yesavage. The two share the same tall and lanky stature, though Hargrove will still need to grow into his body to reach his maximum velocity potential.   
+
+
 
 
 
