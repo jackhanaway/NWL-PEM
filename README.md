@@ -52,7 +52,7 @@ IP (+0.10): Innings pitched reflects durability and sample size reliability. A m
 
 BAA (−0.10): Batting average against isolates opponent contact quality. A midrange negative weight penalizes pitchers allowing frequent base hits despite decent command metrics.
 
-DICE (−0.40): The most heavily weighted component, DICE (Defense-Independent Component ERA) isolates skill from defensive and random variance. Its strong negative weight ensures the model prioritizes sustainable, defense-independent performance. DICE focuses on outcomes a pitcher can control—strikeouts, walks, hit-by-pitches, and home runs—removing the noise created by team fielding or luck. By emphasizing DICE, the metric rewards pitchers who consistently prevent runs regardless of team context or small sample fluctuations. DICE and its cousin FIP are among my favorite metrics for evaluating pitchers who can consistently "get it done".
+DICE (−0.40): The most heavily weighted component, DICE (Defense-Independent Component ERA) isolates skill from defensive and random variance. Its strong negative weight ensures the model prioritizes sustainable, defense-independent performance. DICE focuses on outcomes a pitcher can control—strikeouts, walks, hit-by-pitches, and home runs—removing the noise created by team fielding or luck. By emphasizing DICE, the metric rewards pitchers who consistently prevent runs regardless of team context or small sample fluctuations. DICE and its cousin FIP are among my favorite metrics for evaluating pitchers who can consistently "get it done", and control what they can control.
 
 To improve interpretability, I decided to scale the score in a similar manner that stats like WRc+ and ERA+ are weighted in MLB context, so that 100 represents the league average, with each 15-point increment corresponding roughly to one standard deviation above or below average. Since this study only covers data from one of the four Northwoods League divisions, "league average" signifies average production from this division. This makes the metric intuitive and easy to interpret, similar to widely used statistics like OPS+ or ERA+, allowing quick comparison of pitchers’ performance relative to their peers.
 
@@ -112,8 +112,10 @@ Though the two pitchers have contrasting mound presences, the similarities betwe
 
 ### #3 – Cohen Gomez, RHP | GPE Pitching Score: 372.1 | Team: Eau Claire Express | School: Stanford | Age: 20 | Height/Weight: 6'3/212 lbs
 
+Cohen Gomez posted the highest GPE Pitching Score out of any pitcher in the dataset with more than 30 innings pitched. The big right hander was a staple for Eau Claire's rotation this summer, pitching to a 3.70 ERA over 48.2 innings. Gomez had the 4th lowest DICE in the division, and 
 
 
+<iframe src="https://jackhanaway.github.io/NWL-PEM/GPE-DICE-Interactive.html" width="100%" height="600px"></iframe>
 
 
 
