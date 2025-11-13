@@ -115,7 +115,9 @@ Though the two pitchers have contrasting mound presences, the similarities betwe
 Cohen Gomez posted the highest GPE Pitching Score out of any pitcher in the dataset with more than 30 innings pitched. The big right hander was a staple for Eau Claire's rotation this summer, pitching to a 3.70 ERA over 48.2 innings. Gomez had the 4th lowest DICE in the division, and 
 
 
-<iframe src="https://jackhanaway.github.io/NWL-PEM/GPE-DICE-Interactive.html" width="100%" height="600px"></iframe>
+[🔍 View Interactive DICE Plot](https://jackhanaway.github.io/NWL-PEM/GPE-DICE-Interactive.html)
+
+
 
 
 
