@@ -69,30 +69,48 @@ A linear regression was fitted to the data to examine any potential trend betwee
 This plot highlights that high or low GPE Pitching Scores are not simply a function of innings pitched; rather, the scores reflect underlying performance metrics and DICE adjustments. Pitchers with fewer innings can still achieve high scores if their underlying metrics are strong, reinforcing the metric’s ability to capture quality of performance independent of sample size.
 ---
 
-**Scouting Grade Overview**
+****Scouting Grade Overview****
 
 In addition to the quantitative pitching score (GPE Pitch Score), I wanted to provide quantitative scouting grades for certain outlier performers. These grades provide context that the data alone cannot fully reflect, including pitch repertoire, delivery, command, in-game decision-making, mound presence, and more factors. 
 
 For this phase of the project, I will generate scouting reports for the top five pitchers based on their GPE Pitching Scores to contextualize their outlier scores. I will also be highlighting their strengths, areas for improvement, and overall potential. Additionally, a few honorable mentions will be included to recognize pitchers who excelled in specific aspects despite slightly lower overall scores. These scouting evaluations complement the metric-driven analysis, offering a comprehensive picture of player performance in the Great Plains East Division.
 
-### #1 – Dawson Hargrove, RHP | GPE Pitching Score: 455.2 | Team: Eau Claire Express | Current School: Southern Illinois (via Arkansas State) | Age: 23 | Height/Weight: 6'3/195 lbs
+### #1 – Dawson Hargrove, RHP | GPE Pitching Score: 455.2 | Team: Eau Claire Express | Current School: Southern Illinois (via Arkansas State) | Age: 23 | Height/Weight: 6'3/195 lbs 
 
-In a relatively small sample size, Dawson Hargrove established himself as the most reliable pitcher for the express, posting a 1.07 ERA over 25.1 innings in 7 appearances, including 3 starts. A theme common to each of the top 5 scorers in the division, Hargrove has multiple unique aspects to his game that helped him cement himself as an outlier performer. 
+In a relatively small sample size, Dawson Hargrove established himself as the most reliable pitcher for the Eau Claire this summer, posting a 1.07 ERA over 25.1 innings in 7 appearances, including 3 starts. Hargroved averaged over a strikeout per inning in those 25.1 innings pitched. A theme common to each of the top 5 scorers in the division, Hargrove has multiple unique aspects to his game that helped him cement himself as an outlier performer. 
 
-**Arsenal**
+## Arsenal
 
-Hargrove boasts a complete north to south arsenal including a 4 seam, splitter, slider, and 12-6 curveball. Hargrove's 4 seam fastball sits from 88-90 MPH, topping out at around 92, and excels at commanding it up in the strike zone, and tunneling his offspeeds off of it. Hargrove's 4 seam routinely registers outlier induced vertical break, consistently topping 20 inches of IVB, and released it from a near 7 foot release height on average. This shape complemented perfectly with his offspeeds, the most effective of which being his 80 MPH splitter. Hargrove executed his splitter for consistent strikes, low spin rate (1000-1300) combined with a fading, tumbling shape. Hargrove is also comfortable with a sweeping slider from 81-84 MPH, and a 12-6 curveball with heavy vertical drop. 
+Hargrove boasts a complete north to south arsenal with a healthy pitch mix from a high arm slot, including a 4 seam, splitter, slider, and 12-6 curveball. Hargrove's 4 seam fastball sits from 88-90 MPH, topping out at around 92. He excels at commanding the fastball up in the strike zone, and tunneling his offspeeds off of it. Hargrove's 4 seam routinely registers outlier induced vertical break, consistently topping 20 inches of IVB, and released it from a near 7 foot release height on average. This shape complemented perfectly with his offspeeds, the most effective of which being his 80 MPH splitter. Hargrove executed his splitter for consistent strikes, low spin rate (1000-1300) combined with a fading, tumbling shape. Hargrove is also comfortable with a sweeping slider from 81-84 MPH, and a 12-6 curveball with heavy vertical drop. 
 
-**Intangibles**
+## Intangibles
 
 Having had the opportunity to work with Hargrove in Eau Claire, I was able to gauge two key proponents to his success: he knows how to use his arsenal, and he pitches with emotion. Hargrove's pitch arsenal and shapes resemble a Northwoods League equivalent of an MLB north-to-south arsenal, and his eye-popping GPE Pitching Score is a testament to his ability to execute said arsenal. While some negative body language may occasionally seep through from a bad call, Hargrove is on the mound looking to dominate his opponent, and has a tangible mound presence. Hargrove's lethal combination of a strong mental game and a refined north-south arsneal led to him dominating the Great Plains East division with the top GPE Pitching Score. 
 
-**MLB Comparison: Trey Yesavage**
+## MLB Comparison: Trey Yesavage**
 
 Hargrove's arsenal of high-IVB fastballs, complemented by a healthy mix of low or negative IVB offspeed offerings bears striking similarities to Toronto's Trey Yesavage. The two share the same tall and lanky stature, though Hargrove will still need to grow into his body to reach his maximum velocity potential.   
 
 
+### #2 – Zack Serup, LHP | GPE Pitching Score: 412.1 | Team: Rochester Honkers | School: Western Kentucky (via Ventura JC) | Age: 21 | Height/Weight: 6'3/195 lbs
 
+Zack Serup was undoubtedly the best pitching option for the Rochester Honkers this summer. In his sample size of 27.1 innings, Serup posted a 0.66 ERA and 0.80 WHIP in 5 appearances, all starts. Serup offers a north to south arsenal, leaning heavily on his mid to upper 80s fastball, high-IVB fastball and gyro slider. Serup's outlier quality was his excellent command, issuing only 5 walks, the fewest of any pitcher above 25 IP. 
+
+## Arsenal
+
+Serup uses 4 pitches: 4-seam, slider, changeup, and a slow 12-6 cuveball. His primary offering is his 4-seam fastball ranging from 84-87, topping 88 MPH, with excellent induced vertical break averaging 19-20 inches, occasionally reaching the 24-25 range. Serup's slider has a unique shape, a slow sweeper with varying horizontal movement, and consistent IVB around 0-3 inches. Would occasionally flash slow get-me-over curve around 67-68 MPH, and is still developing feel for the changeup. 
+
+## Intangibles
+
+I faced Serup twice while with the Express, and both times he was able to tear through our lineup leaning heavily on his fastball. Getting feedback from our hitters, they would insist that the fastball shape is flat, though I would try explain the ride was leading to us swinging under the pitch, leading to popouts and strikeouts. Serup's offspeeds served as a way to set up his fastball, as the ride gave him deceptive perceived velocity. As far as his demeanor, Serup looked relaxed and at-ease while on the mound, letting the shape of his fastball play into our swings resulting in quick outs. 
+
+
+## MLB Comparison: Alex Vesia
+
+Though the two pitchers have contrasting mound presences, the similarities between these two arsenals are palpable. Serup and Vesia both leverage their high IVB fastballs at a heavy usage rate, and find ways to get outs without overpowering reads from the radar gun. These two pitchers also excel at using offspeeds to set up and enhance the shapes of their fastballs. Outlier ride fastballs proved effective in the Northwoods in 2025, but Serup will need to develop fastball velocity and feel for a pitch with armside run away from a righty to be able to pitch at the next level.
+
+
+### #3 – Cohen Gomez, RHP | GPE Pitching Score: 372.1 | Team: Eau Claire Express | School: Stanford | Age: 20 | Height/Weight: 6'3/212 lbs
 
 
 
