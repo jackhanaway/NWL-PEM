@@ -55,3 +55,8 @@ BAA (−0.10): Batting average against isolates opponent contact quality. A midr
 DICE (−0.40): The most heavily weighted component, DICE (Defense-Independent Component ERA) isolates skill from defensive and random variance. Its strong negative weight ensures the model prioritizes sustainable, defense-independent performance. DICE focuses on outcomes a pitcher can control—strikeouts, walks, hit-by-pitches, and home runs—removing the noise created by team fielding or luck. By emphasizing DICE, the metric rewards pitchers who consistently prevent runs regardless of team context or small sample fluctuations. DICE and its cousin FIP are among my favorite metrics for evaluating pitchers who can consistently "get it done".
 
 To improve interpretability, I decided to scale the score in a similar manner that stats like WRc+ and ERA+ are weighted in MLB context, so that 100 represents the league average, with each 15-point increment corresponding roughly to one standard deviation above or below average. Since this study only covers data from one of the four Northwoods League divisions, "league average" signifies average production from this division. This makes the metric intuitive and easy to interpret, similar to widely used statistics like OPS+ or ERA+, allowing quick comparison of pitchers’ performance relative to their peers.
+
+Interactive Plot of Pitching Score
+
+[GPE-Pitching-Interactive.html](https://jackhanaway.github.io/NWL-PEM/GPE-Pitching-Interactive.html)
+
