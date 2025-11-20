@@ -131,19 +131,19 @@ Gomez is an interesting prospect, in the sense that he has proven collegiate lev
 
 ### #4 – Chris Petersen, RHP | GPE Pitching Score: 332.3 | Team: Waterloo Bucks | School: St. Thomas | Age: 19 | Height/Weight: 6'4/215 lbs
 
-Chris Peterson was the highest scoring pitcher on the Waterloo Bucks, though my analysis on him is limited, as he only pitched during the first half of the season, and Eau Claire never got the chance to face him. Peterson started 5 games for the Bucks in 2025, to the tune of a 2.12 ERA in just short of 30 innings, with an impressive 1.02 WHIP. 
+Chris Petersen was the highest scoring pitcher on the Waterloo Bucks, though my analysis on him is limited, as he only pitched during the first half of the season, and Eau Claire never got the chance to face him. Petersen started 5 games for the Bucks in 2025, to the tune of a 2.12 ERA in just short of 30 innings, with an impressive 1.02 WHIP. 
 
 ## Arsenal
 
-Peterson's primary offerings include a four-seam fastball, 12/6 curveball, splitter, and a developing slider. While sitting in the high 80s throughout the Northwoods season, Peterson's fastball proved effective with good ride and occasional cut. This release makes Peterson a potential candidate for a seam-shifted sinker to add an offering with more armside run. Peterson's curveball and splitter are both very strong offerings, as he has great command of his big-movement curveball with strong sweep and depth. The splitter is also a depthy pitch of which he has great feel, his pitching coach says it has the potential to turn into a plus-pitch. The slider is a developing pitch, as it has a gyro movement profile with velocity around 80, similar to his fastball. Peterson likely needs to add velocity to this pitch to create more of a cutter-slider hybrid to create a greater difference in movement profile to his curveball.
+Petersen's primary offerings include a four-seam fastball, 12/6 curveball, splitter, and a developing slider. While sitting in the high 80s throughout the Northwoods season, Petersen's fastball proved effective with good ride and occasional cut. This release makes Petersen a potential candidate for a seam-shifted sinker to add an offering with more armside run. Petersen's curveball and splitter are both very strong offerings, as he has great command of his big-movement curveball with strong sweep and depth. The splitter is also a depthy pitch of which he has great feel, his pitching coach says it has the potential to turn into a plus-pitch. The slider is a developing pitch, as it has a gyro movement profile with velocity around 80, similar to his fastball. Petersen likely needs to add velocity to this pitch to create more of a cutter-slider hybrid to create a greater difference in movement profile to his curveball.
 
 ## Intangibles
 
-Despite being only 19, Peterson has a consistent, easy delivery with polished command. Peterson has a starter's build and profile, and is able to hold his velocity throughout his starts. Good feel for his north/south arsenal, knows how to pitch, and is a mature player for his age, a type of player that St. Thomas produces well. Projects to be a weekend starter in his redshirt freshman campaign at St. Thomas, and has a high floor and ceiling to his ability. 
+Despite being only 19, Petersen has a consistent, easy delivery with polished command. Petersen has a starter's build and profile, and is able to hold his velocity throughout his starts. Good feel for his north/south arsenal, knows how to pitch, and is a mature player for his age, a type of player that St. Thomas produces well. Projects to be a weekend starter in his redshirt freshman campaign at St. Thomas, and has a high floor and ceiling to his ability. 
 
 ### MLB Comparison: Zac Gallen
 
-Peterson draws some comparisons to Diamondbacks ace Zac Gallen for a couple of reasons. Similar to Gallen, Peterson's best putaway pitch is his sharp, big-shaped curveball with sweep, and complement it with a cut-ride fastball and consistent fading pitch (splitter for Peterson, changeup for Gallen). Though neither of these pitchers will blow their opposition away with their fastball velocity, but its shape pairs very well with the rest of their arsenal, allowing it to be an effective tunnel. I believe both pitchers could also benefit from tweaks to their slider shape to increase the effectiveness of the pitch relative to their arsenal. Though I was unable to see Peterson pitch in person, through studying his film I believe Peterson will project into a high-level college starter with potential to pitch professionally. Very polished arm for 19 years old.
+Petersen draws some comparisons to Diamondbacks ace Zac Gallen for a couple of reasons. Similar to Gallen, Petersen's best putaway pitch is his sharp, big-shaped curveball with sweep, and complement it with a cut-ride fastball and consistent fading pitch (splitter for Peterson, changeup for Gallen). Though neither of these pitchers will blow their opposition away with their fastball velocity, but its shape pairs very well with the rest of their arsenal, allowing it to be an effective tunnel. I believe both pitchers could also benefit from tweaks to their slider shape to increase the effectiveness of the pitch relative to their arsenal. Though I was unable to see Peterson pitch in person, through studying his film I believe Peterson will project into a high-level college starter with potential to pitch professionally. Very polished arm for 19 years old.
 
 
 ### #5 – Nate Vidlak, RHP | GPE Pitching Score: 324.3 | Team: Duluth Huskies | School: Stephen F. Austin (via College of Idaho) | Age: 22 | Height/Weight: 6'1/205 lbs
@@ -191,6 +191,7 @@ Though Terhaar still has time to develop before his draft year, his current arse
 
 
 ## HM2 – Luis Pablo Navarro, LHP | GPE Pitching Score: 267.62 | Team: La Crosse Loggers | School: Tulane (via Pima CC) | Age: 19 | Height/Weight: 6'2/185 lbs
+
 
 
 
