@@ -85,7 +85,7 @@ Hargrove boasts a complete north to south arsenal with a healthy pitch mix from 
 
 ## Intangibles
 
-Having had the opportunity to work with Hargrove in Eau Claire, I was able to gauge two key proponents to his success: he knows how to use his arsenal, and he pitches with emotion. Hargrove's pitch arsenal and shapes resemble a Northwoods League equivalent of an MLB north-to-south arsenal, and his eye-popping GPE Pitching Score is a testament to his ability to execute said arsenal. While some negative body language may occasionally seep through from a bad call, Hargrove is on the mound looking to dominate his opponent, and has a tangible mound presence. Hargrove's lethal combination of a strong mental game and a refined north-south arsneal led to him dominating the Great Plains East division with the top GPE Pitching Score. 
+Having had the opportunity to work with Hargrove in Eau Claire, I was able to gauge two key proponents to his success: he knows how to use his arsenal, and he pitches with emotion. Hargrove's pitch arsenal and shapes resemble a Northwoods League equivalent of an MLB north-to-south arsenal, and his eye-popping GPE Pitching Score is a testament to his ability to execute said arsenal. Additionally, Hargrove had an impressive 66% first-pitch strike rate, good for 6th among qualified pitchers in the dataset. While some negative body language may occasionally seep through from a bad call, Hargrove is on the mound looking to dominate his opponent, and has a tangible mound presence. Hargrove's lethal combination of a strong mental game and a refined north-south arsneal led to him dominating the Great Plains East division with the top GPE Pitching Score. 
 
 ## MLB Comparison: Trey Yesavage
 
@@ -129,12 +129,46 @@ Gomez's mound presence is the most polarizing and essential part to his pitching
 Gomez is an interesting prospect, in the sense that he has proven collegiate level pitchability as an underclassman, despite having clear potential to improve his velocity. His execution ability and mound presence draw comparisons to Lance Lynn, an old-fashioned pitcher who's pitchability enhanced his arsenal. I included Brewers closer Trevor Megill as a testament to Gomez's potential. Gomez is a big, strong arm with good work ethic; with proper development it would not suprise me to see Gomez reach the mid to upper 90s by his draft year. He also reflects the intensity of these two arms, in the sense that he serves as a field general on the baseball field. Gomez was easily one of the arms most projectable to professional baseball that I saw in the Northwoods. 
 
 
+### #4 – Chris Petersen, RHP | GPE Pitching Score: 332.3 | Team: Waterloo Bucks | School: St. Thomas | Age: 19 | Height/Weight: 6'4/215 lbs
+
+Chris Peterson was the highest scoring pitcher on the Waterloo Bucks, though my analysis on him is limited, as he only pitched during the first half of the season, and Eau Claire never got the chance to face him. Peterson started 5 games for the Bucks in 2025, to the tune of a 2.12 ERA in just short of 30 innings, with an impressive 1.02 WHIP. 
+
+## Arsenal
+
+Peterson's primary offerings include a four-seam fastball, 12/6 curveball, splitter, and a developing slider. While sitting in the high 80s throughout the Northwoods season, Peterson's fastball proved effective with good ride and occasional cut. This release makes Peterson a potential candidate for a seam-shifted sinker to add an offering with more armside run. Peterson's curveball and splitter are both very strong offerings, as he has great command of his big-movement curveball with strong sweep and depth. The splitter is also a depthy pitch of which he has great feel, his pitching coach says it has the potential to turn into a plus-pitch. The slider is a developing pitch, as it has a gyro movement profile with velocity around 80, similar to his fastball. Peterson likely needs to add velocity to this pitch to create more of a cutter-slider hybrid to create a greater difference in movement profile to his curveball.
+
+## Intangibles
+
+Despite being only 19, Peterson has a consistent, easy delivery with polished command. Peterson has a starter's build and profile, and is able to hold his velocity throughout his starts. Good feel for his north/south arsenal, knows how to pitch, and is a mature player for his age, a type of player that St. Thomas produces well. Projects to be a weekend starter in his redshirt freshman campaign at St. Thomas, and has a high floor and ceiling to his ability. 
+
+### MLB Comparison: Zac Gallen
+
+Peterson draws some comparisons to Diamondbacks ace Zac Gallen for a couple of reasons. Similar to Gallen, Peterson's best putaway pitch is his sharp, big-shaped curveball with sweep, and complement it with a cut-ride fastball and consistent fading pitch (splitter for Peterson, changeup for Gallen). Though neither of these pitchers will blow their opposition away with their fastball velocity, but its shape pairs very well with the rest of their arsenal, allowing it to be an effective tunnel. I believe both pitchers could also benefit from tweaks to their slider shape to increase the effectiveness of the pitch relative to their arsenal. Though I was unable to see Peterson pitch in person, through studying his film I believe Peterson will project into a high-level college starter with potential to pitch professionally. Very polished arm for 19 years old.
 
 
+### #5 – Nate Vidlak, RHP | GPE Pitching Score: 324.3 | Team: Duluth Huskies | School: Stephen F. Austin (via College of Idaho) | Age: 22 | Height/Weight: 6'1/205 lbs
 
+Nate Vidlak was the highest scoring pitcher to play for the Duluth Huskies this summer, and is one of the most unique pitchers I've ever witnessed in person. In 5 appearances (4 starts), Vidlak posted a miniscule 0.90 ERA over 20 innings pitched, with three of these appearances coming against Eau Claire. Vidlak's unique arsenal and strong game experience are a major part of the reason why many of my hitters on Eau Claire believe Vidlak was the best pitcher in the Northwoods League this year. 
 
+## Arsenal
 
+The most evident outlier quality Vidlak possesses is his incredibly unique arsenal. His arsenal consists primarily of a cutting four-seam, sharp gyro slider, depthy splitter, and a 12-6 curveball with big shape. Vidlak's fastball is a very unusual look for hitters, as it has consistent gloveside cut and light sink, almost like a cutter/slider hybrid. When considering pitchers in the Northwoods with this type of fastball shape, Vidlak has outlier velocity, sustaining a consistent 90-92, topping out 93 with the unique offering. Bizarrely, Vidlak doesn't fully get behind the baseball, leading to this cutting shape, but this also implies that with mechanical tweaks, Vidlak could potentially develop a high-velo true four seam fastball with a distinct cutter. It is worth noting that Vidlak is also the only pitcher in the top 5 of GPE Pitch Scores without a "ride" fastball. Vidlak's natural wrist supination on release also makes him a great candidate for a seam shift sinker, to add a pitch with legitimate armside run. Vidlak's slider plays especially well of his unique fastball, mirroring shape and spin until the last second. The shape resembles a sharp gyro slider with additional sweep, and he throws it at 81-83 MPH. His splitter is another lethal offering off of his fastball, as he is able to kill spin well and create a late, tumbling movement effect. Though Vidlak does not use his slower 12-6 curveball especially often, he uses it effectively. It served as an excellent show pitch on 0-0, as he could consistently land the pitch in the zone while hitters were focused on his other offerings. Vidlak has excellent command, only walking 7 batters in 20 innings, and is able to throw any pitch in any count.
 
+## Intangibles
+
+Vidlak oozes experience on the mound. Before committing to Stephen A. Austin after his successful Northwoods League campaign, Vidlak pitched for 3 years at NAIA College of Idaho. His experience showed on the mound this summer, as Vidlak showed great feel for executing his arsenal, mixing up timing and looks, and using his funk to his advantage. Knowing the fact that any pitch could be coming at any point in the at-bat, it was very difficult for us to sustain consistent offense off of Vidlak. Combining strong mound presence, extensive mound time, and his unique arsenal, Vidlak was an outlier among pitchers in the division, and across the Northwoods League this year
+
+## MLB Comparison: Corbin Burnes, Hurston Waldrep
+
+Though Vidlak is very much his own pitcher, I found a few similarities between Vidlak's pitching style and these two MLB arms. My mind first goes to Vidlak's elite cut-fastball, which drew comparisons in shape to reliever David Robertson. While their cutter shapes are similar, Vidlak's pitchability projects him as a cutter-heavy starter profile, and his execution of his secondaries off of his cutter reminded me of Corbin Burnes. While both like to lean on the cutter over starts, both possess exceptional offspeeds, each of which could be their best pitch any given game. Vidlak's execution of his splitter reminded me of watching Hurston Waldrep, dating back to his days at Florida. Both of these arms have devastating splitters when executed properly, and have an innate ability to mix up their offerings to bring out the best in each pitch. While Vidlak is an older college pitcher, I believe if he posts promising numbers in his jump to Division 1 baseball, I believe his potential could carry him to a professional opportunity.
+
+### Honorable Mentions
+
+## HM1 – Kenny Fistler, RHP | GPE Pitching Score: 197.6 | Team: Eau Claire Express | School: Alma College (MI) | Age: 22 | Height/Weight: 5'11/170 lbs
+
+## HM2 – Luis Pablo Navarro, LHP | GPE Pitching Score: 267.62 | Team: La Crosse Loggers | School: Tulane (via Pima CC) | Age: 19 | Height/Weight: 6'2/185 lbs
+
+## HM3 – Nick Terhaar, RHP | GPE Pitching Score: 257.9 | Team: Duluth Huskies | School: Iowa | Age: 18 | Height/Weight: 6'3/225 lbs
 
 
 
